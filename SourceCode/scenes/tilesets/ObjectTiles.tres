@@ -20,6 +20,7 @@
 [ext_resource path="res://images/enemies/smartball/walk1.png" type="Texture" id=18]
 [ext_resource path="res://images/enemies/smartblock/walk1.png" type="Texture" id=19]
 [ext_resource path="res://images/editor/LavaHitbox.png" type="Texture" id=20]
+[ext_resource path="res://images/editor/HurtBox.png" type="Texture" id=21]
 
 [resource]
 2/name = "BadSnowball"
@@ -512,3 +513,17 @@
 37/shape_one_way_margin = 0.0
 37/shapes = [  ]
 37/z_index = 10
+38/name = "HurtBox"
+38/texture = ExtResource( 21 )
+38/tex_offset = Vector2( 0, 0 )
+38/modulate = Color( 1, 1, 1, 1 )
+38/region = Rect2( 0, 0, 32, 32 )
+38/tile_mode = 0
+38/occluder_offset = Vector2( 0, 0 )
+38/navigation_offset = Vector2( 0, 0 )
+38/shape_offset = Vector2( 0, 0 )
+38/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+38/shape_one_way = false
+38/shape_one_way_margin = 0.0
+38/shapes = [  ]
+38/z_index = 0
