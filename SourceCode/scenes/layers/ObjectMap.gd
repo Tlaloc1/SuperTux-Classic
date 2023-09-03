@@ -74,6 +74,7 @@ var tile_entities = {
 	"BadSmartblock" : "enemies/Smartblock",
 	
 	"HazLavaHitbox" : "objects/LavaHitbox",
+	"HurtBox"	: "objects/Hurtbox",
 }
 
 var entity_offset = Vector2(16, 16)
