@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://images/particles/invincible_sparkle.png" type="Texture" id=1]
+[ext_resource path="res://scenes/particles/stars.tres" type="Material" id=2]
+
+[node name="Starfall Particles" type="ParallaxBackground"]
+layer = 100
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2( 2048, 0 )
+
+[node name="Particles2D" type="Particles2D" parent="ParallaxLayer"]
+position = Vector2( 256, -30 )
+z_index = 50
+amount = 300
+lifetime = 3.0
+preprocess = 8.0
+speed_scale = 0.5
+visibility_rect = Rect2( -6500, 0, 8400, 3000 )
+process_material = ExtResource( 2 )
+texture = ExtResource( 1 )

@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/particles/SnowfallSmall.tres" type="Material" id=1]
+[ext_resource path="res://images/enemies/iceblock/squished.png" type="Texture" id=2]
+[ext_resource path="res://images/enemies/snowball/walk3.png" type="Texture" id=3]
+[ext_resource path="res://images/enemies/fish/down.png" type="Texture" id=4]
+
+[node name="EnemyFall" type="ParallaxBackground"]
+layer = 100
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.5, 1 )
+motion_mirroring = Vector2( 2048, 0 )
+
+[node name="Particles2D2" type="Particles2D" parent="ParallaxLayer"]
+scale = Vector2( 0.5, 0.5 )
+z_index = -10
+amount = 50
+lifetime = 3.0
+preprocess = 8.0
+speed_scale = 0.5
+visibility_rect = Rect2( -6500, 0, 8400, 200 )
+process_material = ExtResource( 1 )
+texture = ExtResource( 3 )
+
+[node name="Particles2D3" type="Particles2D" parent="ParallaxLayer"]
+scale = Vector2( 0.5, 0.5 )
+amount = 50
+lifetime = 3.0
+preprocess = 8.0
+speed_scale = 0.5
+visibility_rect = Rect2( -6500, 0, 8400, 200 )
+process_material = ExtResource( 1 )
+texture = ExtResource( 2 )
+
+[node name="Particles2D4" type="Particles2D" parent="ParallaxLayer"]
+scale = Vector2( 0.5, 0.5 )
+amount = 50
+lifetime = 3.0
+preprocess = 8.0
+speed_scale = 0.5
+visibility_rect = Rect2( -6500, 0, 8400, 200 )
+process_material = ExtResource( 1 )
+texture = ExtResource( 4 )
