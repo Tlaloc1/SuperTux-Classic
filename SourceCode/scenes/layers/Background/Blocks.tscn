@@ -8,7 +8,7 @@
 [sub_resource type="CanvasItemMaterial" id=1]
 blend_mode = 1
 
-[node name="IceMountainsBackground" type="ParallaxBackground"]
+[node name="Blocks" type="ParallaxBackground"]
 
 [node name="Sky" type="Control" parent="."]
 anchor_right = 1.0
