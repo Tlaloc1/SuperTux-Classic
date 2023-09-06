@@ -6,7 +6,7 @@
 [sub_resource type="CanvasItemMaterial" id=1]
 blend_mode = 1
 
-[node name="CastleBG" type="Node2D"]
+[node name="Venice" type="Node2D"]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
