@@ -71,7 +71,7 @@ blend_mode = 1
 [sub_resource type="CanvasItemMaterial" id=12]
 blend_mode = 1
 
-[node name="SnowBG" type="ParallaxBackground"]
+[node name="Night Sky" type="ParallaxBackground"]
 
 [node name="Sky" type="ParallaxLayer" parent="."]
 
