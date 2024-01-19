@@ -20,6 +20,8 @@
 
 extends StateMachine
 
+var player = Global.player
+
 func _ready():
 	add_state("walk")
 	add_state("squished")
@@ -39,6 +41,8 @@ func _ready():
 			call_deferred("set_state", "fall")
 		"Jumpy": # Jumpy goes to a bouncing state
 			call_deferred("set_state", "bounce_up")
+		"SmartJumpy":	
+			call_deferred("set_state","bounce_up_smart")
 		"Bouncing": # Bouncing snowball bounces forwards
 			call_deferred("set_state", "bounce_forward")
 		"Flying": # Bouncing snowball bounces forwards
@@ -47,6 +51,7 @@ func _ready():
 			call_deferred("set_state", "walk")
 
 func _state_logic(delta):
+	var player = Global.player
 	match state:
 		"water_submerged": return
 		"fly":
@@ -55,6 +60,14 @@ func _state_logic(delta):
 			return
 		"bounce_up":
 			host.jumpy_bounce()
+			host.apply_gravity(delta)
+			host.jumpy_movement()
+			host.update_sprite()
+			return
+		"bounce_up_smart":
+			if Input.is_action_just_pressed("jump"):
+				if player.state_machine.state == "idle" or player.state_machine.state == "walk":
+					host.jumpy_bounce()
 			host.apply_gravity(delta)
 			host.jumpy_movement()
 			host.update_sprite()
