@@ -38,6 +38,7 @@ var tile_entities = {
 	
 	# Objects
 	"ObjCoin" : "objects/Coin",
+	"ObjCoinBad":"objects/CoinBad",
 	
 	"ObjBonusEmpty" : "objects/BonusEmpty",
 	"ObjBonus1up" : "objects/Bonus1up",
@@ -72,6 +73,7 @@ var tile_entities = {
 	"BadFish" : "enemies/Fish",
 	"BadSmartball" : "enemies/Smartball",
 	"BadSmartblock" : "enemies/Smartblock",
+	"BadSmartJumpy":"enemies/SmartJumpy",
 	
 	"HazLavaHitbox" : "objects/LavaHitbox",
 	"HurtBox"	: "objects/Hurtbox",
